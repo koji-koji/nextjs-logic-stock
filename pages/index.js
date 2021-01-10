@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import HeaderArea from '../components/layouts/Header.tsx';
 
 export default function Home() {
   return (
@@ -9,6 +10,9 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <HeaderArea />
+      
 
       <Link href="/sample">
         <a>sample</a>
