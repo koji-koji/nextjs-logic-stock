@@ -1,0 +1,37 @@
+// yarn add --dev typescript @types/react @types/node
+// yarn devで初期設定。
+
+{
+  // コンパイルするときのオプション
+  "compilerOptions": {
+    "target": "es5",
+    // コンパイルする際に使用する組み込みライブラリを指定する。
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx"
+  },
+  // コンパイルする対象ファイルを記述する。ファイルを直接指定する場合はfilesオプションを使う。
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  // コンパイル対象から外すファイルを記述する。filesで指定したものは無効。
+  "exclude": [
+    "node_modules"
+  ]
+  // extendsで指定することでtsconfig.jsonを複数のファイルに分割して、環境ごとの出力の違いに対応したりする。
+}
