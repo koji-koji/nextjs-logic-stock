@@ -13,8 +13,30 @@ const FileFormUPloadArea = () => {
     return '';
   };
 
-  const infoMessage = () => {
-    return `<p>aaa</p> </br> <p>bbb</p>`;
+  const infoMessage = (infoMessages: string[] = []) => {
+    return infoMessages?.length ? (
+      <div>
+        {infoMessages.map((infoMaggage) => (
+          <p>{infoMaggage}</p>
+        ))}
+      </div>
+    ) : (
+      ''
+    );
+  };
+
+  const checkError = () => {};
+
+  const errorMessage = (errorMessages: string[] = []) => {
+    return errorMessages?.length ? (
+      <div>
+        {errorMessages.map((errorMessage) => (
+          <p>{errorMessage}</p>
+        ))}
+      </div>
+    ) : (
+      ''
+    );
   };
 
   const [sampleValue, setSampleValue] = useState('');
@@ -37,18 +59,14 @@ const FileFormUPloadArea = () => {
               <TextField
                 id="outlined-basic"
                 name="name1"
-                label="サンプル1"
+                label="サンプル12"
                 variant="outlined"
                 error={isSubmit && true}
-                helperText={infoMessage() + handleErrorMessage()}
+                helperText={infoMessage()}
                 onChange={(e) => {
                   setSampleValue(e.currentTarget.value);
+                  if (isSubmit) checkError();
                 }}
-                // helperText={'asdfsafdfas'}
-                // helperText={(inputProps) => {
-                //   debugger;
-                //   return 'aaa';
-                // }}
               />
               {isSubmit.toString()}
             </li>
