@@ -1,8 +1,12 @@
 import { TextField } from '@material-ui/core';
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 
-const TextFieldParts = () => {
-  const [isSubmit, setIsSubmit] = useState(false);
+type Props = {
+  isSubmit: boolean;
+};
+
+const TextFieldParts: FC<Props> = (props) => {
+  const { isSubmit } = props;
   const [sampleValue, setSampleValue] = useState('');
 
   const handleErrorMessage = () => {

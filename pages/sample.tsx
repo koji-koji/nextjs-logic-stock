@@ -1,7 +1,7 @@
 import React from 'react';
 import SimpleTable from '../components/mass/SimpleTable';
 import SortTable from '../components/mass/SortTable';
-import FileFormUPloadArea from '../components/layouts/FileFormUploadArea';
+import FileFormUPloadArea from '../components/layouts/SampleFormArea';
 
 // ファイル名から自動でルーティングが設定される。この場合は/sampleでマッチ。
 // urlになるので、ファイル名はケバブケースが無難。コンポーネント名はキャメルケースなので注意。

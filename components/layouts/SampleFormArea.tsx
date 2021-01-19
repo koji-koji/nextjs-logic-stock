@@ -1,14 +1,15 @@
 import { Button, Input, TextField } from '@material-ui/core';
 import { SentimentSatisfied } from '@material-ui/icons';
 import React, { useState } from 'react';
+import TextFieldParts from '../parts/TextField';
 
-const FormUploadArea = () => {
+const SampleFormArea = () => {
+  const [isSubmit, setIsSubmit] = useState(false);
   return (
     <>
       <form
         action=""
         onSubmit={(e) => {
-          debugger;
           e.preventDefault();
           console.log(e.target.elements.name1.value);
           alert('sumbmit!');
@@ -16,7 +17,9 @@ const FormUploadArea = () => {
       >
         <div className="p-5">
           <ul>
-            <li></li>
+            <li>
+              <TextFieldParts isSubmit={isSubmit}></TextFieldParts>
+            </li>
             <li></li>
             <li></li>
             <li></li>
@@ -32,4 +35,4 @@ const FormUploadArea = () => {
   );
 };
 
-export default FileFormUPloadArea;
+export default SampleFormArea;
