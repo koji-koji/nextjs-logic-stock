@@ -19,31 +19,23 @@ const TextFieldParts: FC<Props> = (props) => {
     return '';
   };
 
-  const infoMessage = (infoMessages: string[] = []) => {
-    return infoMessages?.length ? (
-      <div>
-        {/* 改行処理 */}
-        {infoMessages.map((infoMaggage) => (
-          <p>{infoMaggage}</p>
-        ))}
-      </div>
-    ) : (
-      ''
-    );
-  };
-
   const checkError = () => {};
 
+  const infoMessage = (infoMessages: string[] = []) => {
+    return infoMessages?.length ? returnBreakMessage(infoMessages) : '';
+  };
+
   const errorMessage = (errorMessages: string[] = []) => {
-    return errorMessages?.length ? (
+    return errorMessages?.length ? returnBreakMessage(errorMessages) : '';
+  };
+
+  const returnBreakMessage = (messages: string[] = []) => {
+    return (
       <div>
-        {/* 改行処理 */}
-        {errorMessages.map((errorMessage) => (
-          <p>{errorMessage}</p>
+        {messages.map((message) => (
+          <p>{message}</p>
         ))}
       </div>
-    ) : (
-      ''
     );
   };
 
