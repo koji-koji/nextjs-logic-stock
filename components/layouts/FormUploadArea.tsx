@@ -2,7 +2,7 @@ import { Button, Input, TextField } from '@material-ui/core';
 import { SentimentSatisfied } from '@material-ui/icons';
 import React, { useState } from 'react';
 
-const FileFormUPloadArea = () => {
+const FormUploadArea = () => {
   return (
     <>
       <form
