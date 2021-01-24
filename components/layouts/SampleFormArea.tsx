@@ -11,7 +11,7 @@ const SampleFormArea = () => {
         action=""
         onSubmit={(e) => {
           e.preventDefault();
-          console.log(e.target.elements.name1.value);
+          // console.log(e.target.elements.name1.value);
           alert('sumbmit!');
         }}
       >
