@@ -33,7 +33,7 @@ const TextFieldParts: FC<Props> = (props) => {
     infoMessages: string[] = [],
     errorMessages: string[] = []
   ) => {
-    infoMessages.
+    return returnBreakMessage(infoMessages.concat(errorMessages));
   };
 
   const returnBreakMessage = (messages: string[] = []) => {
