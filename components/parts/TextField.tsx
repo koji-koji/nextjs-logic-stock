@@ -29,6 +29,13 @@ const TextFieldParts: FC<Props> = (props) => {
     return errorMessages?.length ? returnBreakMessage(errorMessages) : '';
   };
 
+  const returnInfoAndErrorMessage = (
+    infoMessages: string[] = [],
+    errorMessages: string[] = []
+  ) => {
+    infoMessages.
+  };
+
   const returnBreakMessage = (messages: string[] = []) => {
     return (
       <div>
@@ -47,7 +54,7 @@ const TextFieldParts: FC<Props> = (props) => {
         label="サンプル12"
         variant="outlined"
         error={isSubmit && true}
-        helperText={infoMessage()}
+        helperText={returnInfoAndErrorMessage()}
         onChange={(e) => {
           setSampleValue(e.currentTarget.value);
           if (isSubmit) checkError();
